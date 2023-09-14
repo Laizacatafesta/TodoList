@@ -1,12 +1,46 @@
 import { useState } from 'react'
 
 function App() {
+  const [todos, setTodos] = useState([ //onde armazena os dados iniciais
+    {
+      id:1, //objetos
+      text: "Criar funcionalidade x no sistema",
+      category: "Trabalho",
+      isCompleted: false,
+    },
+    {
+      id:2,
+      text: "Ir pra academia",
+      category: "Pessoal",
+      isCompleted: false,
+    },
+    {
+      id:3,
+      text: "Estudar React",
+      category: "Estudos",
+      isCompleted: false,
+    },
+  ]) 
 
   return (
-    <div>
-      Olá React!
-    </div>
+  <div className="app">
+    <h1>Lista de Tarefas</h1>
+      <div className="todo-list">
+        {todos.map((todo) => ( //percorre a lista to-do
+          <div className="todo">
+            <div className="content">
+              <p>{todo.text}</p> 
+              <p className="category">({todo.category})</p>
+            </div>
+            <div>
+              <button>Check</button>
+              <button>Delete</button>
+            </div>
+          </div>
+        ))} 
+      </div>
+  </div> 
   )
 }
-
+  
 export default App
