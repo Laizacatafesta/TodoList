@@ -5,7 +5,6 @@ import TodoForm from "./components/TodoForm"
 
 import "./App.css"
 
-
 function App() {
   const [todos, setTodos] = useState([ //onde armazena os dados iniciais
     {
