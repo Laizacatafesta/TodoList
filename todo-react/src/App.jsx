@@ -1,4 +1,8 @@
-import { useState } from 'react'
+import { useState } from "react"
+
+import Todo from "./components/Todo"
+
+import "./App.css"
 
 function App() {
   const [todos, setTodos] = useState([ //onde armazena os dados iniciais
@@ -27,16 +31,7 @@ function App() {
     <h1>Lista de Tarefas</h1>
       <div className="todo-list">
         {todos.map((todo) => ( //percorre a lista to-do
-          <div className="todo">
-            <div className="content">
-              <p>{todo.text}</p> 
-              <p className="category">({todo.category})</p>
-            </div>
-            <div>
-              <button>Check</button>
-              <button>Delete</button>
-            </div>
-          </div>
+          <Todo todo={todo}/>
         ))} 
       </div>
   </div> 
