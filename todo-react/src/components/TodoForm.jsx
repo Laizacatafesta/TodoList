@@ -1,10 +1,18 @@
-import React from "react";
+import {useState} from "react"; //gerenciando dados de titulo e categoria
 
 const TodoForm = () => {
+    const [value, setValue] = useState("");
+    const [category, setCategory] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("enviou form")    
+    };
+
     return (
         <div className="todo-form">
             <h2>Criar nova tarefa:</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Digite o título da tarefa" />
                 <select>
                     <option value="">Selecione uma categoria</option>
