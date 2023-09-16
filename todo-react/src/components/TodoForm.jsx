@@ -9,7 +9,7 @@ const TodoForm = () => {
                 <select>
                     <option value="">Selecione uma categoria</option>
                     <option value="Trabalho">Trabalho</option>
-                    <option value="Pessoal">pessoal</option>
+                    <option value="Pessoal">Pessoal</option>
                     <option value="Estudos">Estudos</option>
                 </select>
                 <button type="submit">Ok</button>
