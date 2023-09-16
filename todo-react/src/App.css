@@ -2,7 +2,7 @@ body {
   font-family: Arial;
   background-color: #f4f4f4;
   padding: 30px;
-  color: #333;
+  color: #7f8c3a;
   background-image: url('./img/pexels-isabel-ph-18290345.jpg');
   background-position: center;
   background-size: cover;
@@ -11,7 +11,7 @@ body {
 .app {
   max-width: 600px;
   margin: 0 auto 300px;
-  background-color: #efefef;
+  background-color: #f0f0ea;
   padding: 20px 30px;
   border-radius: 15px;
 }
@@ -30,4 +30,15 @@ p {
 
 input {
   box-sizing: border-box;
+}
+
+button {
+  background-color: #e8e9c1;
+  color: #7f8c3a;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: .3s;
 }
