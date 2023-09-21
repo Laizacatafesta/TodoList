@@ -32,12 +32,14 @@ function App() {
     const newTodos = [
       ...todos, 
       {
-        id: Math.floor(Math.random() = 10000),
+        id: Math.floor(Math.random() * 10000),
         text,
         category,
         isCompleted: false,
       }  
     ]
+
+    setTodos(newTodos); //atualiza os estados dos todos controlados pelo react
   } 
 
   return (
@@ -48,7 +50,7 @@ function App() {
           <Todo  key={todo.id} todo={todo}/>
         ))} 
       </div>
-      <TodoForm />
+      <TodoForm addTodo={addTodo}/>
   </div> 
   )
 }
