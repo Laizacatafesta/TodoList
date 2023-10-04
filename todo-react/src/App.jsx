@@ -40,13 +40,19 @@ function App() {
 
     setTodos(newTodos); //atualiza os estados dos todos controlados pelo react
   } 
+  //função que trata da remoção
+  const removeTodo = (id) => {
+    const newTodos = [...todos]
+    const filteredTodos = newTodos.filter(todo => todo.id !== id ? todo : null);
+      setTodos(filteredTodos);
+  }
 
   return (
   <div className="app">
     <h1>Lista de Tarefas</h1>
       <div className="todo-list">
         {todos.map((todo) => ( //percorre a lista to-do
-          <Todo  key={todo.id} todo={todo}/>
+          <Todo  key={todo.id} todo={todo} removeTodo={removeTodo}/>
         ))} 
       </div>
       <TodoForm addTodo={addTodo}/>
